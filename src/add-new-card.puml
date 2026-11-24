@@ -1,4 +1,4 @@
-@startuml
+@startuml Добавление новой медицинской карты
 skinparam shadowing false
 skinparam roundCorner 0
 
