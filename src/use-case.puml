@@ -1,0 +1,46 @@
+@startuml use-case-medcard
+' Use Case-диаграмма: учёт медицинских карт пациентов
+' Связи акторов восстановлены по исходному изображению
+' pic/Снимок экрана 2026-11-18 065357.png
+
+left to right direction
+skinparam backgroundColor #F7F8FA
+skinparam shadowing false
+skinparam actorStyle awesome
+skinparam usecase {
+    BackgroundColor #5B8DEF
+    BorderColor #3A6FD8
+    FontColor #FFFFFF
+    FontSize 13
+}
+skinparam actor {
+    BackgroundColor #FFFFFF
+    BorderColor #333333
+}
+
+actor "Пациент" as patient
+actor "Врач" as doctor
+actor "Системный администратор" as admin
+
+usecase "Просмотр выписок и\nнаправлений" as view_reports
+usecase "Просмотр медицинской\nкарты" as view_card
+usecase "Редактирование\nмедицинской карты" as edit_card
+usecase "Управление\nпользователями" as manage_users
+usecase "Просмотр расписания" as view_schedule
+usecase "Редактирование\nрасписания" as edit_schedule
+
+patient -- view_reports
+patient -- view_card
+patient -- view_schedule
+
+doctor -- view_reports
+doctor -- view_card
+doctor -- edit_card
+doctor -- manage_users
+doctor -- view_schedule
+
+admin -- manage_users
+admin -- view_schedule
+admin -- edit_schedule
+
+@enduml
