@@ -1,4 +1,4 @@
-@startuml
+@startuml Поиск и редактирование медицинской карты
 skinparam shadowing false
 skinparam roundCorner 0
 
