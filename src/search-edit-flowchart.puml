@@ -1,0 +1,19 @@
+@startuml
+skinparam shadowing false
+skinparam roundCorner 0
+
+start
+:Ввод: ID пациента/;
+:Поиск записи в SQLite (SELECT ... WHERE id = ?);
+
+if (Медицинская карта найдена?) then (Да)
+  :Вывод: Текущие данные карты (ФИО, диагноз, телефон)/;
+  :Ввод: Выбор поля (1 — Диагноз, 2 — Телефон) и новое значение/;
+  :Обновление записи в SQLite (UPDATE patients ... + commit)/;
+  :Вывод: Запись успешно обновлена/;
+else (Нет)
+  :Вывод: Пациент с указанным ID не найден/;
+endif
+
+stop
+@enduml
