@@ -1,0 +1,20 @@
+# Кэш и временные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальные окружения (если создавались)
+.venv/
+venv/
+env/
+
+# Локальная база данных SQLite (создаётся автоматически при запуске src/main.py)
+*.db
+*.sqlite3
+
+# Настройки IDE и системные файлы (PyCharm, IntelliJ IDEA, VS Code)
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
