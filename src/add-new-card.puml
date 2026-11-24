@@ -1,0 +1,22 @@
+@startuml
+skinparam shadowing false
+skinparam roundCorner 0
+
+start
+repeat
+  :Ввод: Номер карты, ФИО, дата рождения,
+  полис ОМС (16 цифр), диагноз, телефон/;
+repeat while (Формат даты и полиса корректен?) is (Нет) not (Да)
+
+:Попытка записи в SQLite (INSERT INTO patients ...);
+
+if (Номер карты и полис уникальны?) then (Да)
+  :Сохранение данных (conn.commit);
+  :Вывод: Медицинская карта успешно добавлена/;
+else (Нет)
+  :Ошибка IntegrityError:
+  карта или полис ОМС уже существуют/;
+endif
+
+stop
+@enduml
