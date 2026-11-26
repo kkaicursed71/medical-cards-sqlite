@@ -9,7 +9,6 @@ medical-cards-sqlite/
 │   └── database.py      # Работа с SQLite и CRUD-запросы
 ├── .gitignore           # Исключения для Git (__pycache__, *.db, .idea)
 ├── requirements.txt     # Зависимости проекта (только стандартная библиотека)
-├── LICENSE              # Лицензия MIT
 └── README.md            # Документация проекта
 ```
 
