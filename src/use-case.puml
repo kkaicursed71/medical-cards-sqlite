@@ -1,7 +1,4 @@
 @startuml use-case-medcard
-' Use Case-диаграмма: учёт медицинских карт пациентов
-' Связи акторов восстановлены по исходному изображению
-' pic/Снимок экрана 2026-11-18 065357.png
 
 left to right direction
 skinparam backgroundColor #F7F8FA
